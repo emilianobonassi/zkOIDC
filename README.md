@@ -30,16 +30,16 @@ Below the typical flow, you can test it with this [simple app](https://zk-oidc-s
 
 For the tech implementation, you may start reading [here](./api/index.js).
 
-App is serverless and deployed to Vercel at https://zk-oidc.app
+App is serverless and deployed to Vercel at https://zkoidc.xyz
 
 ## How to add my enable my web2 app
 
 It's easy, it's like a traditional OIDC server (e.g. [Okta](https://www.okta.com/)). You just need to create your client and define the redirect URIs.
 
 Below the process:
-1. Go to the [Sismo Factory](https://factory.sismo.io/apps-explorer) and create a new app using `zk-oidc.vercel.app` as authorized domain. Take note of your Sismo app id.
+1. Go to the [Sismo Factory](https://factory.sismo.io/apps-explorer) and create a new app using `zkoidc.xyz` as authorized domain. Take note of your Sismo app id.
 1. Fork this repo and edit the [clients.js](./config/clients.js) file adding your client details, `client_id` is your Sismo app id. For a frontend-only app, copy the zk-oidc-simple-app conf. For a app with a backend (e.g. discourse forum), copy the zk-forum one.
-1. Create a PR. When merged, you can configure you app using the zkOIDC well-known [link](https://zk-oidc.vercel.app/oidc/.well-known/openid-configuration).
+1. Create a PR. When merged, you can configure you app using the zkOIDC well-known for your app https://<appid>.zkoidc.xyz/oidc/.well-known/openid-configuration.
 
 ## ID Token format
 
@@ -56,7 +56,7 @@ This is an example of the data you will get
   "aud": "0xf9a3cce444b65927a9dd225d6731b341",
   "exp": 1683808779,
   "iat": 1683805179,
-  "iss": "https://zk-oidc.vercel.app/oidc"
+  "iss": "https://zkoidc.xyz/oidc"
 }
 
 ```
